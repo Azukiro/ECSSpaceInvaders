@@ -1,0 +1,54 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SpaceInvaders.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="PlayerLive" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+    <Setting Name="MissileLive" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="InvaderLive" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="RatioLive" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">30</Value>
+    </Setting>
+    <Setting Name="PlayerSpeed" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">150</Value>
+    </Setting>
+    <Setting Name="InvadersSpeed" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">70</Value>
+    </Setting>
+    <Setting Name="MissileSpeed" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">150</Value>
+    </Setting>
+    <Setting Name="InvaderIncreaseSpeed" Type="System.Single" Scope="Application">
+      <Value Profile="(Default)">1.01</Value>
+    </Setting>
+    <Setting Name="ShootSound" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">..\..\Resources\shootSound.wav</Value>
+    </Setting>
+    <Setting Name="InvaderKilledSound" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">..\..\Resources\invaderkilled.wav</Value>
+    </Setting>
+    <Setting Name="ExplosionSound" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">..\..\Resources\explosion.wav</Value>
+    </Setting>
+    <Setting Name="AmbianceSound" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">..\..\Resources\ambiance.mpeg</Value>
+    </Setting>
+    <Setting Name="BackgroundColor" Type="System.String" Scope="User">
+      <Value Profile="(Default)">#FFFFFF</Value>
+    </Setting>
+    <Setting Name="PlayersColor" Type="System.String" Scope="User">
+      <Value Profile="(Default)">#000000</Value>
+    </Setting>
+    <Setting Name="InvaderDownPixel" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="Difficulty" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Normal</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D64CAEE7-4128-4D96-816C-0068C52973D1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SpaceInvaders</RootNamespace>
+    <AssemblyName>SpaceInvaders</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>3</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ECSFramework\Components\ParticleManager.cs" />
+    <Compile Include="ECSFramework\Components\PlayerInput.cs" />
+    <Compile Include="ECSFramework\Components\DeathAudio.cs" />
+    <Compile Include="ECSFramework\Components\MissileColission.cs" />
+    <Compile Include="ECSFramework\Components\Colission.cs" />
+    <Compile Include="ECSFramework\Components\Health.cs" />
+    <Compile Include="ECSFramework\Components\MissileRender.cs" />
+    <Compile Include="ECSFramework\Components\AutoMoveable.cs" />
+    <Compile Include="ECSFramework\Components\ParticleDirection.cs" />
+    <Compile Include="ECSFramework\Components\ParticleRender.cs" />
+    <Compile Include="ECSFramework\Components\Render.cs" />
+    <Compile Include="ECSFramework\Components\Side.cs" />
+    <Compile Include="ECSFramework\Components\TimerParticle.cs" />
+    <Compile Include="ECSFramework\Core\Engine.cs" />
+    <Compile Include="ECSFramework\Core\Entity.cs" />
+    <Compile Include="ECSFramework\Core\IComponent.cs" />
+    <Compile Include="ECSFramework\Utils\ImageProcessing.cs" />
+    <Compile Include="ECSFramework\Core\Node.cs" />
+    <Compile Include="ECSFramework\Nodes\ColissionNode.cs" />
+    <Compile Include="ECSFramework\Nodes\DirectionNode.cs" />
+    <Compile Include="ECSFramework\Nodes\HealthAudioNode.cs" />
+    <Compile Include="ECSFramework\Nodes\HealthNode.cs" />
+    <Compile Include="ECSFramework\Nodes\MissileColisionNode.cs" />
+    <Compile Include="ECSFramework\Nodes\ParticleMovement.cs" />
+    <Compile Include="ECSFramework\Nodes\PlayerInputNode.cs" />
+    <Compile Include="ECSFramework\Nodes\ShootNode.cs" />
+    <Compile Include="ECSFramework\Core\System.cs" />
+    <Compile Include="ECSFramework\Nodes\DeplacementNode.cs" />
+    <Compile Include="ECSFramework\Components\Position.cs" />
+    <Compile Include="ECSFramework\Components\MovementSpeed.cs" />
+    <Compile Include="ECSFramework\Nodes\RenderNode.cs" />
+    <Compile Include="ECSFramework\Systems\EndGameSystem.cs" />
+    <Compile Include="ECSFramework\Systems\HealthSystem.cs" />
+    <Compile Include="ECSFramework\Systems\MovingSystem.cs" />
+    <Compile Include="ECSFramework\Systems\ParticleMovementSystem.cs" />
+    <Compile Include="ECSFramework\Systems\ParticleRenderSystem.cs" />
+    <Compile Include="ECSFramework\Systems\RenderSystem.cs" />
+    <Compile Include="ECSFramework\Systems\CollisionSystem.cs" />
+    <Compile Include="ECSFramework\Systems\DirectionSystem.cs" />
+    <Compile Include="ECSFramework\Systems\ShootSystem.cs" />
+    <Compile Include="ECSFramework\Systems\PlayerInputSystem.cs" />
+    <Compile Include="ECSFramework\Systems\SoundSystem.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Game.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ECSFramework\Utils\SoundUtils.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shoot2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shoot3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shoot4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bonus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bonus2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bunker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ship1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ship2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ship3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ship4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ship5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ship6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ship7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ship8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ship9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shoot1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ShootSound.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invaderkilled.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shootSound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\explosion.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ambiance.mpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Goku.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Goku2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cell.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\missile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\missile2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CellMove_4Frame_39.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CellShoot_3Frame_40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GokuShoot_8Frames_40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KameHouse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ambiance.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cosmo.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
